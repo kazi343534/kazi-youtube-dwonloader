@@ -2,6 +2,16 @@
 
 Chrome extension + Python backend to download YouTube videos with yt-dlp and ffmpeg.
 
+## About
+
+This project lets you download any YouTube video directly from your browser. A Chrome extension adds a **Download** button to YouTube video pages — click it, pick your quality, and the file saves to your computer. The actual downloading is handled by a local Python server running yt-dlp and ffmpeg, which fetch the video from YouTube and merge the best video and audio streams into a single file.
+
+Built with:
+- **Chrome Extension** (Manifest v3) — injects UI on YouTube, provides a popup for manual URLs
+- **Flask** — lightweight Python web server
+- **yt-dlp** — downloads videos from YouTube and many other sites
+- **ffmpeg** — merges separate video/audio streams into one file
+
 ## Features
 
 - Download button injected directly on YouTube video pages
