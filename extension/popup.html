@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <h1>YouTube Downloader</h1>
+
+    <div class="status-row">
+      <span class="status-label">Backend:</span>
+      <span id="backendStatus" class="status-offline">Offline</span>
+    </div>
+
+    <div class="url-row">
+      <input type="text" id="videoUrl" placeholder="Paste YouTube URL here..." />
+      <button id="fetchInfo">Fetch</button>
+    </div>
+
+    <div id="videoInfo" class="hidden">
+      <h2 id="videoTitle"></h2>
+      <div id="formatsContainer"></div>
+    </div>
+
+    <div id="errorMsg" class="hidden error"></div>
+
+    <div class="footer">
+      <p>Need the backend? Run: <code>python server.py</code></p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
