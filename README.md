@@ -2,6 +2,24 @@
 
 Chrome extension + Python backend to download YouTube videos with yt-dlp and ffmpeg.
 
+## Share with a friend
+
+1. Give them the `extension/` folder (or `youtube-downloader.zip`)
+2. They unzip it, then in Chrome: `chrome://extensions` → Developer mode → **Load unpacked** → select `extension`
+3. They run:
+
+```bash
+pip3 install flask flask-cors yt-dlp
+brew install ffmpeg
+cd youtube-downloader/backend && python3 server.py
+```
+
+Or use the one-click setup script:
+
+```bash
+bash setup.sh
+```
+
 ## About
 
 This project lets you download any YouTube video directly from your browser. A Chrome extension adds a **Download** button to YouTube video pages — click it, pick your quality, and the file saves to your computer. The actual downloading is handled by a local Python server running yt-dlp and ffmpeg, which fetch the video from YouTube and merge the best video and audio streams into a single file.
